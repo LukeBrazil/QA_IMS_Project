@@ -7,7 +7,10 @@ public class Runner {
 		
 		SqlCon myCon = new SqlCon();
 //		myCon.addCustomer();
-		myCon.showAllCustomers();
+//		myCon.showAllCustomers();
+//		myCon.createOrder();
+//		myCon.showOrders();
+		myCon.addItemsToOrder();
 	
 	}
 }
