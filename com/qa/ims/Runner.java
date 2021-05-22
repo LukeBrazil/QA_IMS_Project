@@ -6,6 +6,6 @@ public class Runner {
 		// TODO Auto-generated method stub
 		
 		SqlCon myCon = new SqlCon();
-		myCon.getCon();
+		myCon.addCustomer("Fred", "Flinstone", 63);
 	}
 }
