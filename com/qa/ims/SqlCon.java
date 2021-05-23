@@ -114,7 +114,7 @@ public class SqlCon {
 			String query = "INSERT INTO Orders(fk_customer_id) VALUES(" + newOrder.getFk_customer_id() + ")";
 			stmt.execute(query);
 			System.out.println("Added order!");
-		} catch (SQLException ex) {
+		} catch (SQLException ex) { 
 			ex.printStackTrace();
 		}
 		
@@ -149,7 +149,7 @@ public class SqlCon {
 		boolean orderComplete = false;
 		SqlCon myCon = new SqlCon();
 		Scanner myObj = new Scanner(System.in);
-		
+		char option = '\0';
 		
 		do {
 			Statement stmt = null;
@@ -168,8 +168,9 @@ public class SqlCon {
 				stmt.execute(query);
 				System.out.println("Item added to order!");
 				System.out.println("Would you like to add more items?");
-				char decision = myObj.next().charAt(0);
-				if (decision == 'n') {
+				char chosenDecision = myObj.next().charAt(0);
+				option = Character.toUpperCase(chosenDecision);
+				if (option == 'N') {
 					orderComplete = true;
 					break;
 				}
